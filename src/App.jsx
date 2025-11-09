@@ -1,10 +1,9 @@
 import './App.css';
-
+import HeroSection from './Components/HeroSection'
 function App() { 
   return (
     <div className="App">
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is a simple React application.</p>
+      <HeroSection/>
     </div>
   );
 }
