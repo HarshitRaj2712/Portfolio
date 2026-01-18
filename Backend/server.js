@@ -41,32 +41,34 @@ app.post("/send-mail", async (req, res) => {
 
     // ✅ SMTP CONFIG (THIS IS THE KEY FIX)
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    host: "smtp-relay.brevo.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.BREVO_USER,
+      pass: process.env.BREVO_PASS,
+    },
+  });
+
 
     // ✅ Verify connection (important)
     await transporter.verify();
 
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
-      replyTo: email,
-      to: process.env.TO_EMAIL,
-      subject,
-      html: `
-        <h2>📬 New Contact Form Submission</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> ${phone || "N/A"}</p>
-        <p><b>Message:</b></p>
-        <p>${message}</p>
-      `,
-    });
+    from: `"${name}" <${process.env.BREVO_USER}>`,
+    replyTo: email,
+    to: process.env.TO_EMAIL,
+    subject,
+    html: `
+      <h2>📬 New Contact Form Submission</h2>
+      <p><b>Name:</b> ${name}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Phone:</b> ${phone || "N/A"}</p>
+      <p><b>Message:</b></p>
+      <p>${message}</p>
+    `,
+  });
+
 
     res.json({ success: true, message: "Message sent successfully!" });
   } catch (err) {
