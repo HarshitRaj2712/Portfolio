@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://portfolio-gamma-rouge-12.vercel.app/",
+    origin: "https://portfolio-gamma-rouge-12.vercel.app",
   })
 );
 
