@@ -35,7 +35,7 @@ export default function ContactForm() {
     }
 
     try {
-      const res = await fetch("https://portfolio-4e7w.onrender.com/send-mail", {
+      const res = await fetch("https://portfolio-4e7w.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
