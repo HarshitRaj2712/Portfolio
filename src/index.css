@@ -1,5 +1,40 @@
 @import "tailwindcss";
 
 body {
+  
   font-family: "Poppins", sans-serif;
 }
+
+@keyframes scroll-tech {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-tech 45s linear infinite;
+}
+
+.tech-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+

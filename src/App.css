@@ -2,11 +2,8 @@
 
 /* 🌌 Cosmic Background Pattern (Reusable) */
 .cosmic-bg {
-  position: relative;
-  background: radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba(120, 180, 255, 0.25),
-      transparent 70%
-    ),
-    #000000;
+   margin: 0;
+  padding: 0;
+  background-color: black;
+  /* background-color: #000000; */
 }
