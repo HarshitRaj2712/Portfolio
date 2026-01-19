@@ -37,7 +37,7 @@ export default function ContactForm() {
 
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_API_URL}/send-mail`,
+        "http://localhost:3000/send-mail",
         formData,
         {
           headers: { "Content-Type": "application/json" },
