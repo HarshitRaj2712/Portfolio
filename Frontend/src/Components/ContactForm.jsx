@@ -37,13 +37,11 @@ export default function ContactForm() {
 
     try {
       const { data } = await axios.post(
-        "https://your-backend-name.onrender.com/send-mail",
+        `${import.meta.env.VITE_API_URL}/send-mail`,
         formData,
         {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          timeout: 2000, // ⏱ prevents hanging requests
+          headers: { "Content-Type": "application/json" },
+          timeout: 10000,
         }
       );
 
@@ -61,10 +59,8 @@ export default function ContactForm() {
       }
     } catch (error) {
       if (error.response) {
-        // ❌ Backend responded with error
         toast.error(error.response.data.message || "Server error");
       } else if (error.request) {
-        // ❌ No response (CORS / network issue)
         toast.error("Network error. Check server.");
       } else {
         toast.error("Something went wrong");
@@ -84,7 +80,82 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10"
         >
-          {/* inputs unchanged */}
+          {/* Name */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+          />
+
+          {/* Email */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+          />
+
+          {/* Phone */}
+          <input
+            type="text"
+            name="phone"
+            placeholder="Contact Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+          />
+
+          {/* Subject */}
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+          />
+
+          {/* Message */}
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="How can I help you?"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="md:col-span-2 bg-black/40 border border-white/10 p-3 rounded-md outline-none resize-none"
+          />
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="
+              md:col-span-2
+              flex
+              items-center
+              justify-center
+              gap-3
+              bg-gradient-to-b
+              from-purple-300
+              to-purple-700
+              hover:from-purple-700
+              hover:to-purple-300
+              py-3
+              rounded-md
+              transition
+            "
+          >
+            <FaPaperPlane />
+            Send Message
+          </button>
         </form>
       </div>
     </section>
