@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+// import fetch from "node-fetch"; // ✅ IMPORTANT
 
 dotenv.config();
 
@@ -17,10 +18,19 @@ app.use(
 );
 
 /* =======================
+   HEALTH CHECK
+======================= */
+app.get("/", (req, res) => {
+  res.json({ success: true, message: "Backend running 🚀" });
+});
+
+/* =======================
    SEND MAIL (BREVO API)
 ======================= */
 app.post("/send-mail", async (req, res) => {
   try {
+    console.log("API KEY EXISTS:", !!process.env.BREVO_API_KEY);
+
     const { name, email, phone, subject, message } = req.body;
 
     if (!name || !email || !subject || !message) {
@@ -35,13 +45,14 @@ app.post("/send-mail", async (req, res) => {
       {
         method: "POST",
         headers: {
-          "api-key": process.env.BREVO_API_KEY,
+          "api-key": process.env.BREVO_API_KEY, // MUST be 64-char key
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           sender: {
             name: "Portfolio Contact",
-            email: process.env.TO_EMAIL,
+            email: process.env.TO_EMAIL, // VERIFIED sender
           },
           to: [{ email: process.env.TO_EMAIL }],
           replyTo: { email, name },
@@ -60,16 +71,16 @@ app.post("/send-mail", async (req, res) => {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("Brevo error:", data);
+      console.error("❌ Brevo error:", data);
       return res.status(500).json({
         success: false,
         message: "Email sending failed",
       });
     }
 
-    res.json({ success: true });
+    res.json({ success: true, message: "Message sent successfully!" });
   } catch (err) {
-    console.error("Server error:", err);
+    console.error("❌ Server error:", err);
     res.status(500).json({
       success: false,
       message: "Server error",
