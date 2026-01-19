@@ -65,7 +65,7 @@ app.post("/send-mail", async (req, res) => {
     });
 
     // ✅ Verify connection (important)
-    await transporter.verify();
+    
 
     await transporter.sendMail({
       from: `"${name}" <${process.env.EMAIL_USER}>`,
