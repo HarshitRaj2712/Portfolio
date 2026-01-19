@@ -37,11 +37,11 @@ export default function ContactForm() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/send-mail",
+        "https://portfolio-4e7w.onrender.com/send-mail",
         formData,
         {
           headers: { "Content-Type": "application/json" },
-          timeout: 10000,
+          timeout: 30000,
         }
       );
 
