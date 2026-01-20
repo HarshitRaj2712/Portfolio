@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://portfolio-gamma-rouge-12.vercel.app",
+      "https://hars8it2712.vercel.app",
       "http://localhost:5174",
     ],
   })
