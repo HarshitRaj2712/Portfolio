@@ -7,6 +7,7 @@ import CodingProfiles from "./Components/CodingProfiles";
 import Contact from "./Components/Contact";
 import ContactForm from "./Components/ContactForm";
 import Footer from "./Components/Footer";
+import NotFound from "./Components/NotFound";
 import "./index.css";
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
         />
 
         <Route path="/contact-form" element={<ContactForm />} />
+
+         <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
