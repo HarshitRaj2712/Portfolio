@@ -25,7 +25,7 @@ export default function Navbar() {
         className="
           relative
           mx-auto
-          max-w-5xl
+          max-w-4xl
           flex
           items-center
           justify-between
@@ -49,16 +49,59 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 text-sm text-white/80">
-          <button onClick={() => goToSection("home")} className="hover:text-white transition">
-            Home
-          </button>
-          <button onClick={() => goToSection("about")} className="hover:text-white transition">
+          
+          <button onClick={() => goToSection("about")} className="relative 
+              hover:text-white 
+              transition-all 
+              duration-300 
+              hover:-translate-y-0.5
+              after:content-[''] 
+              after:absolute 
+              after:left-0 
+              after:-bottom-1 
+              after:h-[2px] 
+              after:w-0 
+              after:bg-purple-400 
+              after:transition-all 
+              after:duration-300 
+              hover:after:w-full"
+              >
             About
           </button>
-          <button onClick={() => goToSection("projects")} className="hover:text-white transition">
+          <button onClick={() => goToSection("projects")} className="relative 
+              hover:text-white 
+              transition-all 
+              duration-300 
+              hover:-translate-y-0.5
+              after:content-[''] 
+              after:absolute 
+              after:left-0 
+              after:-bottom-1 
+              after:h-[2px] 
+              after:w-0 
+              after:bg-purple-400 
+              after:transition-all 
+              after:duration-300 
+              hover:after:w-full"
+              >
             Work
           </button>
-          <button onClick={() => goToSection("profiles")} className="hover:text-white transition">
+          <button onClick={() => goToSection("profiles")} className="relative 
+              hover:text-white 
+              transition-all 
+              duration-300 
+              hover:-translate-y-0.5
+              after:content-[''] 
+              after:absolute 
+              after:left-0 
+              after:-bottom-1 
+              after:h-[2px] 
+              after:w-0 
+              after:bg-purple-400 
+              after:transition-all 
+              after:duration-300 
+              hover:after:w-full"
+              >
             Coding Profiles
           </button>
         </div>
