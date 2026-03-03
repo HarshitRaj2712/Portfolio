@@ -46,7 +46,7 @@ export default function CodingProfiles() {
             </h3>
 
             <p className="text-gray-300 mb-4">
-              Solved <span className="text-white font-semibold">150+</span>{" "}
+              Solved <span className="text-white font-semibold">190+</span>{" "}
               algorithmic and data structure problems.
             </p>
 
@@ -83,7 +83,7 @@ export default function CodingProfiles() {
             </h3>
 
             <p className="text-gray-300 mb-4">
-              Solved <span className="text-white font-semibold">50+</span>{" "}
+              Solved <span className="text-white font-semibold">70+</span>{" "}
               problems covering core CS fundamentals.
             </p>
 

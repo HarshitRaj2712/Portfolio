@@ -37,6 +37,47 @@ export default function Projects() {
           My Latest <span className="text-purple-500">Projects</span>
         </h2>
 
+        {/* ================= Project 11 ================= */}
+        <div className="group grid md:grid-cols-2 gap-10 items-center mb-24 transition-all duration-300 hover:-translate-y-1">
+          <div className="rounded-lg overflow-hidden border border-white/10 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]">
+            <img src="/P11.png" alt="Smart Local Trust" className="w-full h-full object-cover" />
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold mb-3">Smart Local Trust</h3>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-3 mb-5">
+              <TechBadge icon={FaReact} color="text-cyan-400" label="React" />
+              <TechBadge icon={FaNodeJs} color="text-green-400" label="Node.js" />
+              <TechBadge icon={SiExpress} color="text-gray-300" label="Express" />
+              <TechBadge icon={SiMongodb} color="text-green-500" label="MongoDB" />
+            </div>
+            
+
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Built a full-stack local service marketplace where users can book providers, manage services, and leave reviews through a complete booking lifecycle system.  
+              Implemented secure JWT authentication, email verification, role-based dashboards (User, Provider, Admin), and analytics using the MERN stack.
+            </p>
+
+            <a
+              href="https://smart-local-service.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex items-center gap-2
+                rounded-md border border-white/20
+                bg-white/5 backdrop-blur-md
+                px-4 py-2 text-purple-300
+                transition-all hover:bg-white/10
+                hover:shadow-[0_0_20px_rgba(168,85,247,0.45)]
+              "
+            >
+              Check Live <FiExternalLink />
+            </a>
+          </div>
+        </div>
+
         {/* ================= Project 1 ================= */}
         <div className="group grid md:grid-cols-2 gap-10 items-center mb-24 transition-all duration-300 hover:-translate-y-1">
           <div className="rounded-lg overflow-hidden border border-white/10 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]">
