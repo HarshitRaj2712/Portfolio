@@ -17,6 +17,9 @@ export default function FlowerSection() {
         className="w-[500px] opacity-90"
       />
 
+      {/* Dark gradient bottom */} 
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black via-black/80 to-transparent z-20" />
+
     </section>
   );
 }

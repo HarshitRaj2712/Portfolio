@@ -9,7 +9,7 @@ export default function Contact() {
       id="contact"
       className="min-h-screen bg-black text-white px-6 py-24 flex items-center justify-center"
     >
-      <div className="max-w-4xl w-full text-center">
+      <div className="scroll-reveal max-w-4xl w-full text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
           Let’s build something{" "}
           <span className="text-purple-500">meaningful.</span>

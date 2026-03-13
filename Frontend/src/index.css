@@ -58,3 +58,24 @@ body {
   }
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(42px);
+  transition: opacity 900ms ease-out, transform 900ms ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+

@@ -48,7 +48,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 text-sm text-white/80">
+        <div className="hidden md:flex gap-8 text-sm font-bold text-white/80 ml-auto mr-6">
           
           <button onClick={() => goToSection("about")} className="relative 
               hover:text-white 

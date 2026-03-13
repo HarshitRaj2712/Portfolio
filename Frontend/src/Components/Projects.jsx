@@ -28,7 +28,7 @@ export default function Projects() {
       id="projects"
       className="min-h-screen bg-black text-white px-6 py-24"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="scroll-reveal max-w-6xl mx-auto">
         <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
           Projects
         </p>

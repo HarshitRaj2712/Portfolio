@@ -4,7 +4,7 @@ export default function About() {
       id="about"
       className="min-h-screen bg-black text-white flex items-center justify-center px-6 py-20"
     >
-      <div className="max-w-5xl w-full">
+      <div className="scroll-reveal max-w-5xl w-full">
         {/* Section label */}
         <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
           About

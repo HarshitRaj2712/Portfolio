@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
@@ -12,6 +13,29 @@ import WheelSection from "./Components/WheelSection";
 import "./index.css";
 
 function App() {
+  useEffect(() => {
+    const revealItems = document.querySelectorAll(".scroll-reveal");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    revealItems.forEach(item => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Navbar />

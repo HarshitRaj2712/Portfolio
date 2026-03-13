@@ -6,7 +6,7 @@ export default function CodingProfiles() {
       id="profiles"
       className="min-h-screen bg-black text-white px-6 py-24"
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="scroll-reveal max-w-6xl mx-auto text-center">
         {/* Section Heading */}
         <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
           Coding Profiles

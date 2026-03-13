@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import toast from "react-hot-toast";
 
@@ -21,6 +21,10 @@ export default function ContactForm() {
 
   const isValidPhone = (phone) =>
     phone === "" || /^[0-9]{10}$/.test(phone);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,8 +73,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-24 flex items-center justify-center">
-      <div className="max-w-3xl w-full">
+    <section className="min-h-screen bg-black text-white px-6 pt-32 pb-20 flex items-start justify-center">
+      <div className="hero-reveal max-w-3xl w-full">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center">
           Let’s build something{" "}
           <span className="text-purple-500">meaningful.</span>
