@@ -6,127 +6,127 @@ export default function About() {
     >
       <div className="scroll-reveal max-w-5xl w-full mx-auto">
         {/* Section label */}
-        <p className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm uppercase tracking-widest text-purple-400 mb-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-          About
-        </p>
+            {/* Section label */}
+        {/* Section label */}
+    <p className="inline-flex items-center rounded-full bg-neutral-900 border border-neutral-700 px-5 py-2 text-sm text-white mb-6">
+      About
+    </p>
 
-        {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
-          Solving real problems with purposeful,
-          <span className="text-purple-500"> user-first thinking</span>
-        </h2>
+    {/* Heading */}
+    <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-8">
+      Solving real problems with purposeful,
+      <span className="text-neutral-500"> user-first thinking</span>
+    </h2>
 
-        {/* Description */}
-        <p className="text-gray-300 text-lg leading-relaxed">
-          I’m a{" "}
-          <span className="text-white font-semibold">
-            full-stack developer
-          </span>{" "}
-          who enjoys turning complex ideas into clean, scalable digital
-          solutions. I work across the stack to build products that are
-          intuitive, performant, and reliable.
-        </p>
+    {/* Description */}
+    <p className="text-neutral-300 text-lg leading-relaxed max-w-4xl text-justify">
+      I’m a{" "}
+      <span className="text-white font-medium">
+        full-stack developer
+      </span>{" "}
+      who enjoys turning complex ideas into clean, scalable digital
+      solutions. I work across the stack to build products that are
+      intuitive, performant, and reliable.
+    </p>
 
-        <p className="mt-4 text-gray-300 text-lg leading-relaxed">
-          From crafting responsive interfaces to designing robust backend
-          systems, I focus on writing maintainable code while keeping both
-          user experience and business goals in mind.
-        </p>
+    <p className="mt-5 text-neutral-300 text-lg leading-relaxed max-w-4xl text-justify">
+      From crafting responsive interfaces to designing robust backend
+      systems, I focus on writing maintainable code while keeping both
+      user experience and business goals in mind.
+    </p>
 
-        {/* What I Do */}
-        <div className="mt-10">
-          <h3 className="text-2xl font-semibold text-white mb-5">
-            What I Do
-          </h3>
+    {/* What I Do */}
+    <div className="mt-14">
+      <h3 className="text-2xl font-semibold mb-6">
+        What I Do
+      </h3>
 
-          <ul className="space-y-4 text-gray-300 text-lg">
-            <li className="flex items-start gap-3">
-              <span className="text-purple-500 mt-1">▹</span>
-              Building responsive and modern website frontends using{" "}
-              <span className="text-white">
-                React, Tailwind CSS, JavaScript, and Node.js
+      <ul className="space-y-5 text-neutral-300 text-lg">
+        <li className="flex items-start gap-3">
+          <span className="text-neutral-500">•</span>
+          Building responsive and modern website frontends using
+
+          <span className="text-white ml-2">
+            React, Tailwind CSS, JavaScript, and Node.js
+          </span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="text-neutral-500">•</span>
+          Designing backend APIs using
+          <span className="text-white ml-2">
+            Node.js, Express.js, and MongoDB
+          </span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="text-neutral-500">•</span>
+          Implementing authentication and secure data systems using
+          <span className="text-white ml-2">
+            JWT, MongoDB, and best security practices
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Tech Stack */}
+    <div className="mt-16 flex justify-center">
+
+      <div
+        className="
+        rounded-xl
+        bg-neutral-900
+        border
+        border-neutral-800
+        px-8
+        py-4
+        overflow-hidden
+        "
+      >
+
+        <div className="tech-mask overflow-hidden">
+          <div className="tech-marquee flex gap-10 text-lg font-medium">
+
+            {[
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "React",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "SQL",
+              "PHP",
+              "Java",
+              "Python",
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "React",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "SQL",
+              "PHP",
+              "Java",
+              "Python",
+            ].map((tech, index) => (
+              <span
+                key={index}
+                className="text-white whitespace-nowrap"
+              >
+                {tech}
               </span>
-            </li>
+            ))}
 
-            <li className="flex items-start gap-3">
-              <span className="text-purple-500 mt-1">▹</span>
-              Designing and implementing{" "}
-              <span className="text-white">
-                RESTful backend APIs
-              </span>{" "}
-              using Node.js, Express.js, and MongoDB
-            </li>
-
-            <li className="flex items-start gap-3">
-              <span className="text-purple-500 mt-1">▹</span>
-              Integrating secure user authentication and data management using{" "}
-              <span className="text-white">
-                JWT, MongoDB, and best security practices
-              </span>
-            </li>
-          </ul>
+          </div>
         </div>
 
-        {/* 🔁 Infinite Rotating Tech Stack */}
-        {/* 🔁 Infinite Rotating Tech Stack */}
-{/* 🔁 Infinite Rotating Tech Stack */}
-<div className="mt-16 flex justify-center">
-  {/* OUTER CONTAINER (border stays visible) */}
-  <div
-    className="
-      rounded-2xl
-      bg-white/10
-      backdrop-blur-xl
-      border-2
-      border-white/20
-      px-8
-      py-4
-      max-w-full
-      overflow-hidden
-      shadow-[0_10px_40px_rgba(0,0,0,0.4)]
-    "
-  >
-    {/* INNER MASK (fade happens here) */}
-    <div className="tech-mask overflow-hidden">
-      <div className="tech-marquee gap-10 text-lg sm:text-xl font-medium">
-        {[
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "React",
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "SQL",
-          "PHP",
-          "Java",
-          "Python",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "React",
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "SQL",
-          "PHP",
-          "Java",
-          "Python",
-        ].map((tech, index) => (
-          <span
-            key={index}
-            className="text-white whitespace-nowrap"
-          >
-            {tech}
-          </span>
-        ))}
       </div>
+
     </div>
+
   </div>
-</div>
-
-
-      </div>
-    </section>
+</section>
   );
 }

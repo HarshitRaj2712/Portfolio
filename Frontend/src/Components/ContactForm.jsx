@@ -73,17 +73,54 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white px-6 pt-32 pb-20 flex items-start justify-center">
-      <div className="hero-reveal max-w-3xl w-full">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center">
-          Let’s build something{" "}
-          <span className="text-purple-500">meaningful.</span>
+    <section
+      className="
+      relative
+      min-h-screen
+      flex
+      items-center
+      justify-center
+      px-6
+      pt-32
+      pb-24
+      text-white
+      bg-black
+      bg-cover
+      bg-center
+      overflow-hidden
+      "
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/85"></div>
+
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black via-black/70 to-transparent"></div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+
+      <div className="scroll-reveal relative z-10 max-w-3xl w-full">
+
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-12 text-center">
+          Let's Get in <span className="text-neutral-400">Touch</span>
         </h2>
 
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10"
+          className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          gap-6
+          bg-neutral-900
+          border
+          border-neutral-800
+          p-8
+          rounded-xl
+          "
         >
+
           {/* Name */}
           <input
             type="text"
@@ -92,7 +129,15 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+            className="
+            bg-black
+            border
+            border-neutral-800
+            p-3
+            rounded-md
+            outline-none
+            focus:border-neutral-600
+            "
           />
 
           {/* Email */}
@@ -103,7 +148,15 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+            className="
+            bg-black
+            border
+            border-neutral-800
+            p-3
+            rounded-md
+            outline-none
+            focus:border-neutral-600
+            "
           />
 
           {/* Phone */}
@@ -113,7 +166,15 @@ export default function ContactForm() {
             placeholder="Contact Number"
             value={formData.phone}
             onChange={handleChange}
-            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+            className="
+            bg-black
+            border
+            border-neutral-800
+            p-3
+            rounded-md
+            outline-none
+            focus:border-neutral-600
+            "
           />
 
           {/* Subject */}
@@ -124,7 +185,15 @@ export default function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="bg-black/40 border border-white/10 p-3 rounded-md outline-none"
+            className="
+            bg-black
+            border
+            border-neutral-800
+            p-3
+            rounded-md
+            outline-none
+            focus:border-neutral-600
+            "
           />
 
           {/* Message */}
@@ -135,32 +204,47 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="md:col-span-2 bg-black/40 border border-white/10 p-3 rounded-md outline-none resize-none"
+            className="
+            md:col-span-2
+            bg-black
+            border
+            border-neutral-800
+            p-3
+            rounded-md
+            outline-none
+            resize-none
+            focus:border-neutral-600
+            "
           />
 
-          {/* Submit */}
+          {/* Submit Button */}
           <button
             type="submit"
             className="
-              md:col-span-2
-              flex
-              items-center
-              justify-center
-              gap-3
-              bg-gradient-to-b
-              from-purple-300
-              to-purple-700
-              hover:from-purple-700
-              hover:to-purple-300
-              py-3
-              rounded-md
-              transition
+            md:col-span-2
+            flex
+            items-center
+            justify-center
+            gap-3
+            px-8
+            py-3
+            rounded-full
+            font-medium
+            text-black
+            bg-gradient-to-b
+            from-lime-200
+            to-lime-500
+            hover:from-lime-300
+            hover:to-lime-600
+            transition-all
             "
           >
             <FaPaperPlane />
             Send Message
           </button>
+
         </form>
+
       </div>
     </section>
   );

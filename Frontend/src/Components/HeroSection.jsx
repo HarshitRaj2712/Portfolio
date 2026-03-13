@@ -1,81 +1,51 @@
-// src/components/HeroSection.jsx
-import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
 
-const HERO_TEXTS = [
-  "a problem solver by passion.",
-  "a Software Developer based in India.",
-  "a lifelong learner.",
-];
+// src/components/HeroSection.jsx
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function HeroSection() {
-  const [index, setIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const currentText = HERO_TEXTS[index];
-
-      if (!deleting && subIndex < currentText.length) {
-        setSubIndex(s => s + 1);
-      } else if (deleting && subIndex > 0) {
-        setSubIndex(s => s - 1);
-      } else if (!deleting && subIndex === currentText.length) {
-        setTimeout(() => setDeleting(true), 2000);
-      } else if (deleting && subIndex === 0) {
-        setDeleting(false);
-        setIndex(i => (i + 1) % HERO_TEXTS.length);
-      }
-    }, deleting ? 40 : 100);
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, deleting, index]);
-
   return (
-    <section className="font-inter relative z-10 min-h-screen bg-black flex items-center justify-center px-4">
-      <div className="hero-reveal flex flex-col items-center text-center">
-        {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-3xl">
-          Code is the tool,{" "}
-          <span className="text-purple-500">solving</span><br />
-          <span className="text-purple-500">problems</span> is the goal.
+    <section className="font-inter relative min-h-screen bg-black flex items-center justify-center px-6">
+
+      <div className="flex flex-col items-center text-center max-w-4xl">
+
+        {/* Small intro pill */}
+        <div className="mb-6 px-5 py-2 rounded-full border border-neutral-700 bg-neutral-900 text-sm text-white">
+          Hello, I'm Harshit 👋
+        </div>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white">
+          Full-stack developer{" "}
+          <span className="text-neutral-500">
+            crafting clean & modern designs
+          </span>
         </h1>
 
-        {/* Typing */}
-        <div className="mt-10 flex flex-wrap justify-center text-2xl sm:text-3xl gap-3">
-          <h2 className="text-gray-200">
-            Hi, I’m <span className="text-purple-400">Harshit</span>,
-          </h2>
-          <h2 className="text-purple-400">
-            {HERO_TEXTS[index].substring(0, subIndex)}
-            <span className="animate-pulse">|</span>
-          </h2>
-        </div>
-
-        {/* Socials */}
-        <div className="mt-8 flex gap-5 text-2xl text-white">
-          <a href="https://github.com/HarshitRaj2712/" target="_blank"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/harshit-raj-10931b282/" target="_blank"><FaLinkedin /></a>
-          <a href="mailto:panditjee2712@gmail.com"><FaEnvelope /></a>
-          <a href="https://leetcode.com/hars8it2712/" target="_blank"><SiLeetcode /></a>
-          <a href="https://www.instagram.com/harshit_pathak2712/" target="_blank"><FaInstagram /></a>
-        </div>
-
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="mt-10">
           <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 rounded-md border-2 border-purple-500/50 px-5 py-2.5 text-white transition hover:bg-white hover:text-black"
+            href="mailto:panditjee2712@gmail.com"
+            className="
+            inline-flex items-center gap-2
+            px-8 py-3
+            rounded-full
+            text-black font-medium
+            bg-gradient-to-b
+            from-lime-200
+            to-lime-500
+            hover:from-lime-300
+            hover:to-lime-600
+            transition-all duration-300
+            "
           >
-            Show my work
-            <span className="transition-transform group-hover:translate-x-1">→</span>
+            Email me
+            <FaArrowUpRightFromSquare className="text-sm"/>
           </a>
         </div>
-        
+
       </div>
+
     </section>
   );
-
 }
+

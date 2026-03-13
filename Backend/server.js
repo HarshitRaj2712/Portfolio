@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 ======================= */
 app.post("/send-mail", async (req, res) => {
   try {
-    console.log("API KEY EXISTS:", !!process.env.BREVO_API_KEY);
+    // console.log("API KEY EXISTS:", !!process.env.BREVO_API_KEY);
 
     const { name, email, phone, subject, message } = req.body;
 
