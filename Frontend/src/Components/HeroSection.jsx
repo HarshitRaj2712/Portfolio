@@ -3,20 +3,20 @@ import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
-export default function HeroSection() {
-  const texts = [
-    "a problem solver by passion.",
-    "a Software Developer based in India.",
-    "a lifelong learner.",
-  ];
+const HERO_TEXTS = [
+  "a problem solver by passion.",
+  "a Software Developer based in India.",
+  "a lifelong learner.",
+];
 
+export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      const currentText = texts[index];
+      const currentText = HERO_TEXTS[index];
 
       if (!deleting && subIndex < currentText.length) {
         setSubIndex(s => s + 1);
@@ -26,16 +26,16 @@ export default function HeroSection() {
         setTimeout(() => setDeleting(true), 2000);
       } else if (deleting && subIndex === 0) {
         setDeleting(false);
-        setIndex(i => (i + 1) % texts.length);
+        setIndex(i => (i + 1) % HERO_TEXTS.length);
       }
     }, deleting ? 40 : 100);
 
     return () => clearTimeout(timeout);
   }, [subIndex, deleting, index]);
 
-    return (
+  return (
     <section className="relative z-10 min-h-screen bg-black flex items-center justify-center px-4">
-      <div className="flex flex-col items-center text-center">
+      <div className="hero-reveal flex flex-col items-center text-center">
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-3xl">
           Code is the tool,{" "}
@@ -49,7 +49,7 @@ export default function HeroSection() {
             Hi, I’m <span className="text-purple-400">Harshit</span>,
           </h2>
           <h2 className="text-purple-400">
-            {texts[index].substring(0, subIndex)}
+            {HERO_TEXTS[index].substring(0, subIndex)}
             <span className="animate-pulse">|</span>
           </h2>
         </div>
@@ -73,6 +73,7 @@ export default function HeroSection() {
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
+        
       </div>
     </section>
   );

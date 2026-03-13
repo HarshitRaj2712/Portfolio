@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import ContactForm from "./Components/ContactForm";
 import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
+import WheelSection from "./Components/WheelSection";
 import "./index.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           element={
             <>
               <HeroSection />
+              <WheelSection />
               <About />
               <Projects />
               <CodingProfiles />
