@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
+import Certifications from "./Components/Certifications";
 import CodingProfiles from "./Components/CodingProfiles";
 import Contact from "./Components/Contact";
 import ContactForm from "./Components/ContactForm";
@@ -111,6 +112,7 @@ function App() {
               <WheelSection />
               <About />
               <Projects />
+              <Certifications />
               <CodingProfiles />
               <Contact />
             </main>

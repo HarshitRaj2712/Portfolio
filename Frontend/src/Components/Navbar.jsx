@@ -35,7 +35,7 @@ export default function Navbar() {
         border
         border-neutral-800
         px-6
-        py-3
+        py-2
         shadow-[0_10px_40px_rgba(0,0,0,0.6)]
         "
       >
@@ -66,10 +66,29 @@ export default function Navbar() {
           </button>
 
           <button
+            onClick={() => goToSection("certifications")}
+            className="hover:text-white transition"
+          >
+            Certifications
+          </button>
+
+          <button
             onClick={() => goToSection("profiles")}
             className="hover:text-white transition"
           >
             Coding Profiles
+          </button>
+
+          <button
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1xjsvdrlUl4BqXdmCnbR6qaHQwj-xMcFE/view?usp=sharing",
+                "_blank"
+              )
+            }
+            className="hover:text-white transition"
+          >
+            Resume
           </button>
 
         </div>
@@ -143,6 +162,13 @@ export default function Navbar() {
               className="px-4 py-3 hover:bg-neutral-800"
             >
               Work
+            </button>
+
+            <button
+              onClick={() => goToSection("certifications")}
+              className="px-4 py-3 hover:bg-neutral-800"
+            >
+              Certifications
             </button>
 
             <button

@@ -4,9 +4,9 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function HeroSection() {
   return (
-    <section className="font-inter relative min-h-screen bg-black flex items-center justify-center px-6">
+    <section className="font-inter relative h-[80vh] bg-black flex items-center justify-center px-6">
 
-      <div className="flex flex-col items-center text-center max-w-4xl">
+      <div className="hero-reveal  flex flex-col items-center text-center max-w-4xl mt-25">
 
         {/* Small intro pill */}
         <div className="mb-6 px-5 py-2 rounded-full border border-neutral-700 bg-neutral-900 text-sm text-white">
@@ -14,10 +14,10 @@ export default function HeroSection() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white">
+        <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight text-white">
           Full-stack developer{" "}
           <span className="text-neutral-500">
-            crafting clean & modern designs
+            Building clean & scalable web applications.
           </span>
         </h1>
 

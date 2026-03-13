@@ -99,7 +99,7 @@ export default function ContactForm() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
 
-      <div className="scroll-reveal relative z-10 max-w-3xl w-full">
+      <div className="hero-reveal relative z-10 max-w-3xl w-full">
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-12 text-center">

@@ -8,13 +8,16 @@ export default function FlowerSection() {
   const opacity = useTransform(scrollY, [300, 900], [1, 0]);
 
   return (
-    <section className="relative h-[80vh] bg-black flex items-center justify-center overflow-hidden">
+    <section className="relative h-[50vh] bg-black flex items-center justify-center overflow-hidden">
 
       <motion.img
         src={flower}
         alt="metal flower"
         style={{ rotate, opacity }}
-        className="w-[500px] opacity-90"
+        className="w-[400px]  brightness-125
+        contrast-125
+        saturate-110
+        drop-shadow-[0_0_40px_rgba(255,255,255,0.15)]"
       />
 
       {/* Dark gradient bottom */} 
