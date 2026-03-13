@@ -20,12 +20,12 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-full px-4">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-full px-4" >
       <nav
         className="
           relative
           mx-auto
-          max-w-4xl
+          max-w-6xl
           flex
           items-center
           justify-between
@@ -67,6 +67,7 @@ export default function Navbar() {
               hover:after:w-full"
               >
             About
+            
           </button>
           <button onClick={() => goToSection("projects")} className="relative 
               hover:text-white 

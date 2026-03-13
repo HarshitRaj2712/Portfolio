@@ -6,9 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        morgelora: ["Morgelora", "cursive,Acter, League Spartan"],
-      },
+      fontFamily:{
+      inter: ['Inter', 'sans-serif'],
+    },
     },
   },
   plugins: [],

@@ -10,14 +10,12 @@ export default function FlowerSection() {
   return (
     <section className="relative h-[80vh] bg-black flex items-center justify-center overflow-hidden">
 
-      <div className="scroll-reveal">
-        <motion.img
-          src={flower}
-          alt="metal flower"
-          style={{ rotate, opacity }}
-          className="w-[500px] opacity-90"
-        />
-      </div>
+      <motion.img
+        src={flower}
+        alt="metal flower"
+        style={{ rotate, opacity }}
+        className="w-[500px] opacity-90"
+      />
 
     </section>
   );

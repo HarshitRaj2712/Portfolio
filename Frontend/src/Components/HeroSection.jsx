@@ -34,7 +34,7 @@ export default function HeroSection() {
   }, [subIndex, deleting, index]);
 
   return (
-    <section className="relative z-10 min-h-screen bg-black flex items-center justify-center px-4">
+    <section className="font-inter relative z-10 min-h-screen bg-black flex items-center justify-center px-4">
       <div className="hero-reveal flex flex-col items-center text-center">
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-3xl">
