@@ -4,6 +4,29 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #3b4454 #0a0e14;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0a0e14;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4b5568, #353f50);
+  border-radius: 999px;
+  border: 3px solid #0a0e14;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5e6a7f, #3f4b5f);
+}
+
 @keyframes scroll-tech {
   0% {
     transform: translateX(0%);

@@ -4,7 +4,7 @@ import flower from "../assets/flower.png";
 export default function FlowerSection() {
   const { scrollY } = useScroll();
 
-  const rotate = useTransform(scrollY, [0, 1500], [0, 360]);
+  const rotate = useTransform(scrollY, [0, 1500], [0, 100]);
   const opacity = useTransform(scrollY, [300, 900], [1, 0]);
 
   return (

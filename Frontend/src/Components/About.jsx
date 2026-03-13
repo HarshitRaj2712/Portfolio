@@ -2,11 +2,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black text-white flex items-center justify-center px-6 py-20"
+      className="bg-black text-white px-6 py-20"
     >
-      <div className="scroll-reveal max-w-5xl w-full">
+      <div className="scroll-reveal max-w-5xl w-full mx-auto">
         {/* Section label */}
-        <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
+        <p className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm uppercase tracking-widest text-purple-400 mb-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
           About
         </p>
 

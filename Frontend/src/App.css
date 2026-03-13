@@ -7,3 +7,31 @@
   background-color: black;
   /* background-color: #000000; */
 }
+
+.cursor-orb {
+  --cursor-x: -100px;
+  --cursor-y: -100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  background: #ffffff;
+  transform: translate3d(calc(var(--cursor-x) - 50%), calc(var(--cursor-y) - 50%), 0);
+  transition: transform 180ms ease-out, opacity 140ms ease;
+  will-change: transform, opacity;
+}
+
+.cursor-orb.is-active {
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .cursor-orb {
+    display: none;
+  }
+}

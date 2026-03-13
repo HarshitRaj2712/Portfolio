@@ -8,12 +8,12 @@ export default function CodingProfiles() {
     >
       <div className="scroll-reveal max-w-6xl mx-auto text-center">
         {/* Section Heading */}
-        <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
+        <p className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm uppercase tracking-widest text-purple-400 mb-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
           Coding Profiles
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16">
-          My <span className="text-purple-500">Coding Profiles</span>
+          My <span className="text-purple-400">Coding Profiles</span>
         </h2>
 
         {/* Cards */}

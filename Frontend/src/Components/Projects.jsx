@@ -2,25 +2,29 @@ import { FiExternalLink } from "react-icons/fi";
 import { FaReact, FaNodeJs, FaPhp, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiMysql, SiJavascript } from "react-icons/si";
 
-const TechBadge = ({ icon: Icon, color, label }) => (
-  <div
-    className="
-      flex items-center gap-2
-      rounded-full
-      bg-white/5
-      border border-white/10
-      px-3 py-1
-      text-sm
-      backdrop-blur-md
-      transition
-      hover:scale-105
-      hover:shadow-[0_0_15px_rgba(168,85,247,0.35)]
-    "
-  >
-    <Icon className={`text-lg ${color}`} />
-    <span className="text-gray-200">{label}</span>
-  </div>
-);
+const TechBadge = ({ icon, color, label }) => {
+  const IconComponent = icon;
+
+  return (
+    <div
+      className="
+        flex items-center gap-2
+        rounded-full
+        bg-white/5
+        border border-white/10
+        px-3 py-1
+        text-sm
+        backdrop-blur-md
+        transition
+        hover:scale-105
+        hover:shadow-[0_0_15px_rgba(168,85,247,0.35)]
+      "
+    >
+      <IconComponent className={`text-lg ${color}`} />
+      <span className="text-gray-200">{label}</span>
+    </div>
+  );
+};
 
 export default function Projects() {
   return (
@@ -29,12 +33,12 @@ export default function Projects() {
       className="min-h-screen bg-black text-white px-6 py-24"
     >
       <div className="scroll-reveal max-w-6xl mx-auto">
-        <p className="text-purple-400 text-sm uppercase tracking-widest mb-3">
+        <p className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm uppercase tracking-widest text-purple-400 mb-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
           Projects
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16">
-          My Latest <span className="text-purple-500">Projects</span>
+          My Latest <span className="text-purple-400">Projects</span>
         </h2>
 
         {/* ================= Project 11 ================= */}
