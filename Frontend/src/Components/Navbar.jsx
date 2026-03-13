@@ -20,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-full px-4">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-100 w-full px-4">
       <nav
         className="
         relative
@@ -66,7 +66,10 @@ export default function Navbar() {
           </button>
 
           <button
-            onClick={() => goToSection("certifications")}
+            onClick={() => {
+              setOpen(false);
+              navigate("/certifications");
+            }}
             className="hover:text-white transition"
           >
             Certifications
@@ -165,7 +168,10 @@ export default function Navbar() {
             </button>
 
             <button
-              onClick={() => goToSection("certifications")}
+              onClick={() => {
+                setOpen(false);
+                navigate("/certifications");
+              }}
               className="px-4 py-3 hover:bg-neutral-800"
             >
               Certifications

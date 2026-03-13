@@ -112,9 +112,17 @@ function App() {
               <WheelSection />
               <About />
               <Projects />
-              <Certifications />
               <CodingProfiles />
               <Contact />
+            </main>
+          }
+        />
+
+        <Route
+          path="/certifications"
+          element={
+            <main className="cursor-zone">
+              <Certifications />
             </main>
           }
         />
