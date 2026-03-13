@@ -54,9 +54,9 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="min-h-screen bg-black text-white px-6 py-28"
+      className="min-h-screen bg-black text-white px-6 py-28 flex text-start"
     >
-      <div className="scroll-reveal max-w-7xl mx-auto">
+      <div className="hero-reveal max-w-7xl mx-auto ">
 
         {/* Section Label */}
         <p className="inline-flex items-center rounded-full bg-neutral-900 border border-neutral-700 px-5 py-2 text-sm text-white mb-6">
