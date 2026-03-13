@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
@@ -15,12 +15,33 @@ import "./index.css";
 import "./App.css";
 
 function App() {
+  const location = useLocation();
   const cursorRef = useRef(null);
   const isCursorVisibleRef = useRef(false);
   const [isCursorVisible, setIsCursorVisible] = useState(false);
 
   useEffect(() => {
-    const revealItems = document.querySelectorAll(".scroll-reveal");
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const revealItems = Array.from(document.querySelectorAll(".scroll-reveal"));
+
+    if (revealItems.length === 0) {
+      return;
+    }
+
+    const showAll = () => {
+      revealItems.forEach(item => item.classList.add("is-visible"));
+    };
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
+      showAll();
+      return;
+    }
 
     const observer = new IntersectionObserver(
       entries => {
@@ -37,10 +58,25 @@ function App() {
       }
     );
 
-    revealItems.forEach(item => observer.observe(item));
+    revealItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const isOnScreen = rect.top < window.innerHeight * 0.95 && rect.bottom > 0;
 
-    return () => observer.disconnect();
-  }, []);
+      if (isOnScreen) {
+        item.classList.add("is-visible");
+      } else {
+        observer.observe(item);
+      }
+    });
+
+    // Safety net: never leave sections hidden if observer callbacks are missed.
+    const revealFallbackTimeout = window.setTimeout(showAll, 1500);
+
+    return () => {
+      window.clearTimeout(revealFallbackTimeout);
+      observer.disconnect();
+    };
+  }, [location.pathname]);
 
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) {

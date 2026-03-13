@@ -54,7 +54,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="min-h-screen bg-black text-white px-6 py-28 flex text-start"
+      className="min-h-screen bg-black text-white px-6 py-28 flex text-center"
     >
       <div className="hero-reveal max-w-7xl mx-auto ">
 

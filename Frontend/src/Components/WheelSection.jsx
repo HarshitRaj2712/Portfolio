@@ -1,19 +1,32 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect } from "react";
+import { animate, motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import flower from "../assets/flower.png";
 
 export default function FlowerSection() {
+  const MotionImg = motion.img;
   const { scrollY } = useScroll();
 
+  const introRotate = useMotionValue(-42);
   const rotate = useTransform(scrollY, [0, 1500], [0, 100]);
+  const combinedRotate = useTransform(() => rotate.get() + introRotate.get());
   const opacity = useTransform(scrollY, [300, 900], [1, 0]);
+
+  useEffect(() => {
+    const controls = animate(introRotate, 0, {
+      duration: 1.9,
+      ease: [0.22, 1, 0.36, 1],
+    });
+
+    return () => controls.stop();
+  }, [introRotate]);
 
   return (
     <section className="relative h-[50vh] bg-black flex items-center justify-center overflow-hidden">
 
-      <motion.img
+      <MotionImg
         src={flower}
         alt="metal flower"
-        style={{ rotate, opacity }}
+        style={{ rotate: combinedRotate, opacity }}
         className="w-[400px]  brightness-125
         contrast-125
         saturate-110

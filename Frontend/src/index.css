@@ -93,12 +93,210 @@ body::-webkit-scrollbar-thumb:hover {
   transform: translateY(0);
 }
 
+@keyframes text-glow-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
+  }
+}
+
+.text-glow-reveal {
+  animation: text-glow-rise 850ms ease-out both;
+}
+
+.text-glow-reveal-delay {
+  animation: text-glow-rise 850ms ease-out 140ms both;
+}
+
+@keyframes button-pop-glow {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+    box-shadow: 0 0 0 rgba(163, 230, 53, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 16px 36px rgba(163, 230, 53, 0.2);
+  }
+}
+
+@keyframes button-text-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.08);
+  }
+}
+
+@keyframes text-soft-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.16);
+  }
+}
+
+.button-glow-reveal {
+  animation: button-pop-glow 1150ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
+}
+
+.contact-button-text {
+  background-image: linear-gradient(90deg, #0a0a0a 0%, #222 45%, #0a0a0a 100%);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: button-text-shimmer 5.2s ease-in-out 0.7s infinite;
+}
+
+.text-bottom-pulse {
+  animation: text-glow-rise 850ms ease-out 220ms both, text-soft-pulse 4.2s ease-in-out 1.2s infinite;
+}
+
+@keyframes contact-metallic-drift {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+    opacity: 0.78;
+  }
+  50% {
+    transform: scale(1.06) translate3d(0, -10px, 0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+    opacity: 0.78;
+  }
+}
+
+.contact-metallic-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.contact-metallic-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.05) contrast(1.08);
+  animation: contact-metallic-drift 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.footer-prototype {
+  --token-b4fcc32d-7338-4a08-b725-f1b2514a1db5: #000;
+  --token-422aff6c-4756-4059-9718-509b2e990ab8: #1e1e1e;
+  --token-5610c224-5387-4790-8d8d-85b6fbf579f5: #333;
+  --token-8427eb71-934e-4995-a2d5-922e85a91299: #999;
+  --token-1f8bec93-8299-4b23-835b-81994393e35e: #fff;
+  background-color: var(--token-422aff6c-4756-4059-9718-509b2e990ab8);
+  border: 1px solid var(--token-5610c224-5387-4790-8d8d-85b6fbf579f5);
+  border-radius: 24px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes footer-text-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.92;
+  }
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.footer-moving-text h3,
+.footer-moving-text h4,
+.footer-moving-text p,
+.footer-moving-text a,
+.footer-moving-text li,
+.footer-moving-text span {
+  display: inline-block;
+  animation: footer-text-float 4.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.footer-moving-text h3 {
+  animation-delay: 0.12s;
+}
+
+.footer-moving-text h4 {
+  animation-delay: 0.24s;
+}
+
+.footer-moving-text a {
+  animation-delay: 0.36s;
+}
+
+.footer-moving-text p,
+.footer-moving-text li,
+.footer-moving-text span {
+  animation-delay: 0.48s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal,
-  .scroll-reveal.is-visible {
+  .scroll-reveal.is-visible,
+  .text-glow-reveal,
+  .text-glow-reveal-delay {
     opacity: 1;
     transform: none;
     transition: none;
+    animation: none;
+    text-shadow: none;
+  }
+
+  .button-glow-reveal,
+  .text-bottom-pulse {
+    animation: none;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  .contact-button-text {
+    animation: none;
+    background-image: none;
+    color: #0a0a0a;
+    filter: none;
+  }
+
+  .contact-metallic-image {
+    opacity: 0.85;
+    animation: none;
+    transform: none;
+  }
+
+  .footer-moving-text h3,
+  .footer-moving-text h4,
+  .footer-moving-text p,
+  .footer-moving-text a,
+  .footer-moving-text li,
+  .footer-moving-text span {
+    animation: none;
+    transform: none;
+    opacity: 1;
   }
 }
 

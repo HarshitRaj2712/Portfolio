@@ -13,12 +13,24 @@ export default function Contact() {
       flex items-center justify-center
       px-6 py-28
       text-white
-      bg-[url('https://framerusercontent.com/images/63o2VcfSXaOuqMKYDolL0wuFk.png')]
-      bg-cover
-      bg-center
       overflow-hidden
       "
     >
+      {/* Framer-style background image wrapper */}
+      <div className="contact-metallic-bg" aria-hidden="true">
+        <img
+          decoding="async"
+          loading="lazy"
+          width="1456"
+          height="816"
+          sizes="100vw"
+          srcSet="https://framerusercontent.com/images/63o2VcfSXaOuqMKYDolL0wuFk.png?scale-down-to=512 512w, https://framerusercontent.com/images/63o2VcfSXaOuqMKYDolL0wuFk.png?scale-down-to=1024 1024w, https://framerusercontent.com/images/63o2VcfSXaOuqMKYDolL0wuFk.png 1456w"
+          src="https://framerusercontent.com/images/63o2VcfSXaOuqMKYDolL0wuFk.png"
+          alt="Metallic shape background image"
+          className="contact-metallic-image"
+        />
+      </div>
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/85"></div>
 
@@ -39,12 +51,12 @@ export default function Contact() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+        <h2 className="text-glow-reveal text-4xl md:text-5xl font-semibold tracking-tight mb-6">
           Let's Get in <span className="text-white">Touch</span>
         </h2>
 
         {/* Description */}
-        <p className="text-neutral-300 text-lg max-w-2xl mx-auto mb-10">
+        <p className="text-glow-reveal-delay text-neutral-300 text-lg max-w-2xl mx-auto mb-10">
           Let's connect and start with your project ASAP.
         </p>
 
@@ -52,8 +64,10 @@ export default function Contact() {
         <button
           onClick={() => navigate("/contact-form")}
           className="
+          button-glow-reveal
           inline-flex items-center gap-3
           rounded-full
+          border border-white/50
           px-8 py-3
           font-medium
           text-black
@@ -66,11 +80,11 @@ export default function Contact() {
           "
         >
           <FaPaperPlane />
-          Drop me a message
+          <span className="contact-button-text">Drop me a message</span>
         </button>
 
         {/* Email */}
-        <p className="mt-6 text-neutral-400 text-sm">
+        <p className="text-glow-reveal-delay mt-6 text-neutral-400 text-sm">
           Or email me at{" "}
           <span className="text-white">
             panditjee2712@gmail.com
