@@ -18,58 +18,16 @@ export default function About() {
         </h2>
 
         {/* Description */}
-        <p className="text-neutral-300 text-lg leading-relaxed max-w-4xl text-justify">
-          I’m a{" "}
-          <span className="text-white font-medium">
-            full-stack developer
-          </span>{" "}
-          who enjoys turning complex ideas into clean, scalable digital
-          solutions. I work across the stack to build products that are
-          intuitive, performant, and reliable.
-        </p>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-neutral-300 text-lg leading-relaxed text-justify mb-6">
+            <span className="text-white font-medium">Full-stack developer (MERN)</span> focused on building scalable, real-world web applications with clean architecture and high performance. I create responsive UIs using <span className="text-white font-medium">React</span>, develop robust backend systems with <span className="text-white font-medium">Node.js & Express</span>, and handle data efficiently with <span className="text-white font-medium">MongoDB</span>.
+          </p>
 
-        <p className="mt-5 text-neutral-300 text-lg leading-relaxed max-w-4xl text-justify">
-          From crafting responsive interfaces to designing robust backend
-          systems, I focus on writing maintainable code while keeping both
-          user experience and business goals in mind.
-        </p>
-
-        {/* What I Do */}
-        <div className="mt-14">
-          <h3 className="text-2xl font-semibold mb-6">
-            What I Do
-          </h3>
-
-          <div className="space-y-5 text-neutral-300 text-lg leading-relaxed max-w-4xl">
-
-            <p>
-              I build responsive and modern web interfaces using{" "}
-              <span className="text-white font-medium">
-                React, Tailwind CSS, JavaScript, and Node.js
-              </span>{" "}
-              to deliver smooth and intuitive user experiences.
-            </p>
-
-            <p>
-              I design and develop scalable backend APIs using{" "}
-              <span className="text-white font-medium">
-                Node.js, Express.js, and MongoDB
-              </span>{" "}
-              ensuring efficient data flow and reliable application
-              architecture.
-            </p>
-
-            <p>
-              I implement secure authentication systems and robust data
-              management using{" "}
-              <span className="text-white font-medium">
-                JWT, MongoDB, and industry best practices
-              </span>{" "}
-              to keep applications safe and scalable.
-            </p>
-
-          </div>
+          <p className="text-neutral-300 text-lg leading-relaxed text-justify">
+            My projects solve practical problems like <span className="text-white font-medium">business management, QR systems, and digital platforms</span>, with an emphasis on usability and performance. I believe in writing clean code, optimizing for real-world use cases, and delivering solutions that truly matter to users.
+          </p>
         </div>
+
 
         {/* Tech Stack */}
         <div className="mt-16 flex justify-center">

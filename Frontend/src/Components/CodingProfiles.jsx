@@ -48,7 +48,7 @@ export default function CodingProfiles() {
         </h3>
 
         <p className="text-neutral-300 mb-4">
-          Solved <span className="text-white font-medium">190+</span>{" "}
+          Solved <span className="text-white font-medium">200+</span>{" "}
           algorithmic and data structure problems.
         </p>
 
@@ -59,7 +59,7 @@ export default function CodingProfiles() {
 
       {/* GeeksforGeeks Card */}
       <a
-        href="https://www.geeksforgeeks.org/"
+        href="https://www.geeksforgeeks.org/profile/panditjzbq8"
         target="_blank"
         rel="noopener noreferrer"
         className="
@@ -84,7 +84,7 @@ export default function CodingProfiles() {
         </h3>
 
         <p className="text-neutral-300 mb-4">
-          Solved <span className="text-white font-medium">70+</span>{" "}
+          Solved <span className="text-white font-medium">100+</span>{" "}
           problems covering core CS fundamentals.
         </p>
 
@@ -105,6 +105,8 @@ export default function CodingProfiles() {
     </p>
 
   </div>
+
+  
 </section>
   );
 }

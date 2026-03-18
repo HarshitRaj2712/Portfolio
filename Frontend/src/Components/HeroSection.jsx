@@ -15,14 +15,14 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight text-white">
-          Full-stack developer{" "}
+          Full-Stack Developer{" "}
           <span className="text-neutral-500">
-            Building clean & scalable web applications.
+            Building scalable apps with real-world impact & clean UI
           </span>
         </h1>
 
         {/* CTA Button */}
-        <div className="mt-10">
+        <div className="mt-10 flex gap-4 justify-center flex-wrap">
           <a
             href="mailto:panditjee2712@gmail.com"
             className="
@@ -39,6 +39,24 @@ export default function HeroSection() {
             "
           >
             Email me
+            <FaArrowUpRightFromSquare className="text-sm"/>
+          </a>
+          <a
+            href="/resume.pdf"
+            download="Harshit_Raj_Resume.pdf"
+            className="
+            inline-flex items-center gap-2
+            px-8 py-3
+            rounded-full
+            text-white font-medium
+            border-2 border-lime-500
+            bg-transparent
+            hover:bg-lime-500
+            hover:text-black
+            transition-all duration-300
+            "
+          >
+            Download Resume
             <FaArrowUpRightFromSquare className="text-sm"/>
           </a>
         </div>

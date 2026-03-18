@@ -1,4 +1,4 @@
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { FaReact, FaNodeJs, FaPhp, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiMysql, SiJavascript } from "react-icons/si";
 
@@ -60,32 +60,53 @@ export default function Projects() {
             </div>
 
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              Built a full-stack local service marketplace where users can book providers,
-              manage services, and leave reviews through a complete booking lifecycle system.
-              Implemented secure JWT authentication, email verification, role-based dashboards
-              (User, Provider, Admin), and analytics using the MERN stack.
+              Developed a full-stack local service marketplace enabling users to book verified providers,
+              manage services, and leave reviews through a complete booking lifecycle. Implemented secure
+              JWT authentication with email verification, role-based dashboards (User, Provider, Admin),
+              and analytics using the MERN stack.
             </p>
 
-            <a
-              href="https://smart-local-service.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              inline-flex items-center gap-2
-              px-5 py-2
-              rounded-full
-              text-black
-              font-medium
-              bg-gradient-to-b
-              from-lime-200
-              to-lime-500
-              hover:from-lime-300
-              hover:to-lime-600
-              transition
-              "
-            >
-              Check Live <FiExternalLink />
-            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://smart-local-service.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-black
+                font-medium
+                bg-gradient-to-b
+                from-lime-200
+                to-lime-500
+                hover:from-lime-300
+                hover:to-lime-600
+                transition
+                "
+              >
+                Check Live <FiExternalLink />
+              </a>
+
+              <a
+                href="https://github.com/HarshitRaj2712/Smart-Local-Service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-white
+                font-medium
+                border border-neutral-600
+                hover:border-neutral-400
+                hover:bg-neutral-900
+                transition
+                "
+              >
+                GitHub <FiGithub />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -107,30 +128,52 @@ export default function Projects() {
             </div>
 
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              A MERN stack application that aggregates digital coupons and
-              discount codes, helping users quickly discover the best deals.
+              Built a MERN stack application that aggregates digital coupons and discount codes,
+              allowing users to quickly discover and access the best available deals through a
+              responsive and user-friendly interface.
             </p>
 
-            <a
-              href="https://coupon-hub-six.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              inline-flex items-center gap-2
-              px-5 py-2
-              rounded-full
-              text-black
-              font-medium
-              bg-gradient-to-b
-              from-lime-200
-              to-lime-500
-              hover:from-lime-300
-              hover:to-lime-600
-              transition
-              "
-            >
-              Check Live <FiExternalLink />
-            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://coupon-hub-six.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-black
+                font-medium
+                bg-gradient-to-b
+                from-lime-200
+                to-lime-500
+                hover:from-lime-300
+                hover:to-lime-600
+                transition
+                "
+              >
+                Check Live <FiExternalLink />
+              </a>
+
+              <a
+                href="https://github.com/HarshitRaj2712/Coupon-Hub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-white
+                font-medium
+                border border-neutral-600
+                hover:border-neutral-400
+                hover:bg-neutral-900
+                transition
+                "
+              >
+                GitHub <FiGithub />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -154,30 +197,51 @@ export default function Projects() {
             </div>
 
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              A MERN-based restaurant management system to handle orders,
-              menus, and daily operations efficiently.
+              Developed a MERN-based restaurant management system to streamline order processing,
+              menu management, and daily operations, improving efficiency and reducing manual workload.
             </p>
 
-            <a
-              href="https://online-res-front.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              inline-flex items-center gap-2
-              px-5 py-2
-              rounded-full
-              text-black
-              font-medium
-              bg-gradient-to-b
-              from-lime-200
-              to-lime-500
-              hover:from-lime-300
-              hover:to-lime-600
-              transition
-              "
-            >
-              Check Live <FiExternalLink />
-            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://online-res-front.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-black
+                font-medium
+                bg-gradient-to-b
+                from-lime-200
+                to-lime-500
+                hover:from-lime-300
+                hover:to-lime-600
+                transition
+                "
+              >
+                Check Live <FiExternalLink />
+              </a>
+
+              <a
+                href="https://github.com/HarshitRaj2712/Online-restaurant-reservation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-white
+                font-medium
+                border border-neutral-600
+                hover:border-neutral-400
+                hover:bg-neutral-900
+                transition
+                "
+              >
+                GitHub <FiGithub />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -202,30 +266,51 @@ export default function Projects() {
             </div>
 
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              A fleet management system built with PHP and SQL to track
-              vehicles, drivers, and logistics data.
+              Built a fleet management system using PHP and SQL to track vehicles, manage drivers,
+              and monitor logistics data, enhancing operational visibility and control.
             </p>
 
-            <a
-              href="https://fleet-pro.infinityfreeapp.com/?i=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              inline-flex items-center gap-2
-              px-5 py-2
-              rounded-full
-              text-black
-              font-medium
-              bg-gradient-to-b
-              from-lime-200
-              to-lime-500
-              hover:from-lime-300
-              hover:to-lime-600
-              transition
-              "
-            >
-              Check Live <FiExternalLink />
-            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://fleet-pro.infinityfreeapp.com/?i=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-black
+                font-medium
+                bg-gradient-to-b
+                from-lime-200
+                to-lime-500
+                hover:from-lime-300
+                hover:to-lime-600
+                transition
+                "
+              >
+                Check Live <FiExternalLink />
+              </a>
+
+              <a
+                href="https://github.com/HarshitRaj2712/Fleet-pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                inline-flex items-center gap-2
+                px-5 py-2
+                rounded-full
+                text-white
+                font-medium
+                border border-neutral-600
+                hover:border-neutral-400
+                hover:bg-neutral-900
+                transition
+                "
+              >
+                GitHub <FiGithub />
+              </a>
+            </div>
           </div>
         </div>
 

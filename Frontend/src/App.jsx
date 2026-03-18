@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
+import TechStack from "./Components/TechStack";
 import Certifications from "./Components/Certifications";
 import CodingProfiles from "./Components/CodingProfiles";
 import Contact from "./Components/Contact";
@@ -148,6 +149,7 @@ function App() {
               <WheelSection />
               <About />
               <Projects />
+              <TechStack />
               <CodingProfiles />
               <Contact />
             </main>
