@@ -30,10 +30,10 @@ export default function Footer() {
 
             <p className="mt-4 text-neutral-300 font-medium">
               <a
-                href="mailto:panditjee2712@gmail.com"
+                href="mailto:hars8it2712@gmail.com"
                 className="hover:text-white transition"
               >
-                panditjee2712@gmail.com
+                hars8it2712@gmail.com
               </a>
             </p>
           </div>

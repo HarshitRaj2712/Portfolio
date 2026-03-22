@@ -5,6 +5,7 @@ import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import TechStack from "./Components/TechStack";
+import Education from "./Components/Education";
 import Certifications from "./Components/Certifications";
 import CodingProfiles from "./Components/CodingProfiles";
 import Contact from "./Components/Contact";
@@ -150,6 +151,7 @@ function App() {
               <About />
               <Projects />
               <TechStack />
+              <Education />
               <CodingProfiles />
               <Contact />
             </main>

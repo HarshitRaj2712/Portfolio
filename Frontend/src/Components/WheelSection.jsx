@@ -13,8 +13,8 @@ export default function FlowerSection() {
 
   useEffect(() => {
     const controls = animate(introRotate, 0, {
-      duration: 1.9,
-      ease: [0.22, 1, 0.36, 1],
+      duration: 2,
+      ease: [0.5, 1, 0.8, 1],
     });
 
     return () => controls.stop();
