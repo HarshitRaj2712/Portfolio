@@ -24,6 +24,10 @@ const techStackData = [
     category: "Tools",
     items: ["Git", "GitHub", "Postman", "Figma", "Linux", "Vercel", "Render"],
   },
+  {
+    category: "Soft Skills",
+    items: ["Self Learner", "Problem Solver", "Adaptability", "Team Collaboration"],
+  },
 ];
 
 const containerVariants = {
