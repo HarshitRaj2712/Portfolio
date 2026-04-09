@@ -48,7 +48,7 @@ export default function CodingProfiles() {
         </h3>
 
         <p className="text-neutral-300 mb-4">
-          Solved <span className="text-white font-medium">220+</span>{" "}
+          Solved <span className="text-white font-medium">200+</span>{" "}
           algorithmic and data structure problems.
         </p>
 
