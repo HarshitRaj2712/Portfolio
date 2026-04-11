@@ -84,7 +84,7 @@ export default function CodingProfiles() {
         </h3>
 
         <p className="text-neutral-300 mb-4">
-          Solved <span className="text-white font-medium">120+</span>{" "}
+          Solved <span className="text-white font-medium">100+</span>{" "}
           problems covering core CS fundamentals.
         </p>
 
