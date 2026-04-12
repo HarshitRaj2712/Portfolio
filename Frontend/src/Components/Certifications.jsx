@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import NPTEL from "../assets/NPTEL.jpg";
 import InfosysC1 from "../assets/Infosys-c1.jpg";
 import InfosysC2 from "../assets/Infosys-c2.jpg";
@@ -51,12 +52,28 @@ const certifications = [
 ];
 
 export default function Certifications() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedCert(null);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
+
   return (
-    <section
-      id="certifications"
-      className="min-h-screen bg-black text-white px-6 py-28 flex text-center"
-    >
-      <div className="hero-reveal max-w-7xl mx-auto ">
+    <>
+      <section
+        id="certifications"
+        className="min-h-screen bg-black text-white px-6 py-28 flex text-center"
+      >
+        <div className="hero-reveal max-w-7xl mx-auto ">
 
         {/* Section Label */}
         <p className="inline-flex items-center rounded-full bg-neutral-900 border border-neutral-700 px-5 py-2 text-sm text-white mb-6">
@@ -77,10 +94,14 @@ export default function Certifications() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
 
             {certifications.map((cert, index) => (
-              <div
+              <button
                 key={index}
+                type="button"
+                onClick={() => setSelectedCert(cert)}
                 className="
                 group
+                text-left
+                cursor-pointer
                 rounded-xl
                 overflow-hidden
                 border
@@ -91,6 +112,9 @@ export default function Certifications() {
                 hover:-translate-y-2
                 hover:border-neutral-600
                 hover:shadow-[0_10px_40px_rgba(0,0,0,0.6)]
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-neutral-400
                 "
               >
 
@@ -126,13 +150,48 @@ export default function Certifications() {
 
                 </div>
 
-              </div>
+              </button>
             ))}
 
           </div>
         )}
 
-      </div>
-    </section>
+        </div>
+      </section>
+
+      {selectedCert && (
+        <div
+          className="fixed inset-0 z-40 flex items-start justify-center bg-black/85 px-4 pb-6 pt-28"
+          onClick={() => setSelectedCert(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Certificate preview"
+        >
+          <div
+            className="relative max-h-[calc(100vh-8rem)] max-w-[95vw] overflow-hidden rounded-xl border border-neutral-700 bg-neutral-950"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedCert(null)}
+              className="absolute right-3 top-3 z-10 rounded-full border border-neutral-500 bg-black/70 px-3 py-1 text-sm text-white transition hover:border-white"
+              aria-label="Close certificate preview"
+            >
+              X
+            </button>
+
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="max-h-[calc(100vh-14rem)] w-auto object-contain"
+            />
+            <div className="border-t border-neutral-800 px-4 py-3 text-left">
+              <p className="text-sm text-neutral-300">{selectedCert.title}</p>
+              <p className="text-xs text-neutral-500">{selectedCert.issuer} • Press Esc to close</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
