@@ -13,41 +13,89 @@ const certifications = [
     title: "Introduction to IOT",
     issuer: "NPTEL",
     image: NPTEL,
+    issueDate: "Feb 2024",
+    credentialId: "NPTEL-IOT-2024",
+    level: "Intermediate",
+    duration: "8 weeks",
+    skills: ["IoT Basics", "Sensors", "Embedded Systems"],
+    verifyUrl: "",
   },
   {
     title: "ChatGPT-4 Prompt Engineering: ChatGPT, Generative AI & LLM",
     issuer: "Infosys Springboard",
     image: InfosysC1,
+    issueDate: "Jun 2024",
+    credentialId: "INFY-GENAI-PE-01",
+    level: "Intermediate",
+    duration: "12 hours",
+    skills: ["Prompt Engineering", "LLMs", "GenAI Workflows"],
+    verifyUrl: "",
   },
   {
     title: "Build Generative AI Apps and Solutions with No-Code Tools",
     issuer: "Infosys Springboard",
     image: InfosysC2,
+    issueDate: "Jul 2024",
+    credentialId: "INFY-GENAI-NOCODE-02",
+    level: "Intermediate",
+    duration: "10 hours",
+    skills: ["No-Code AI", "Prototyping", "AI App Design"],
+    verifyUrl: "",
   },
   {
     title: "Computational Theory: Language Principle & Finite Automata",
     issuer: "Infosys Springboard",
     image: InfosysC3,
+    issueDate: "Aug 2024",
+    credentialId: "INFY-CTFA-03",
+    level: "Advanced",
+    duration: "16 hours",
+    skills: ["Automata", "Formal Languages", "Computation Models"],
+    verifyUrl: "",
   },
   {
     title: "PHP Laravel: Build Amazing Streaming Services",
     issuer: "Udemy",
     image: UdemyC1,
+    issueDate: "Oct 2024",
+    credentialId: "UC-LARAVEL-STREAM",
+    level: "Intermediate",
+    duration: "15.5 hours",
+    skills: ["Laravel", "REST APIs", "Backend Architecture"],
+    verifyUrl: "",
   },
   {
     title: "Docker Deep Dive: Build, Ship, and Run Containers",
     issuer: "Udemy",
     image: UdemyC2,
+    issueDate: "Nov 2024",
+    credentialId: "UC-DOCKER-DEEPDIVE",
+    level: "Intermediate",
+    duration: "13 hours",
+    skills: ["Docker", "Containers", "Deployment"],
+    verifyUrl: "",
   },
   {
     title: "Figma: Web & Mobile Projects from Scratch",
     issuer: "Udemy",
     image: UdemyC3,
+    issueDate: "Dec 2024",
+    credentialId: "UC-FIGMA-PROJECTS",
+    level: "Beginner",
+    duration: "9 hours",
+    skills: ["Figma", "UI Design", "Prototyping"],
+    verifyUrl: "",
   },
   {
     title: "Master Generative AI & Generative AI Tools",
     issuer: "Udemy",
     image: UdemyC4,
+    issueDate: "Jan 2025",
+    credentialId: "UC-MASTER-GENAI",
+    level: "Intermediate",
+    duration: "14 hours",
+    skills: ["Generative AI", "AI Tools", "Productivity"],
+    verifyUrl: "",
   },
 ];
 
@@ -134,11 +182,17 @@ export default function Certifications() {
                   />
 
                   {/* subtle overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
                 </div>
 
                 {/* Card content */}
                 <div className="p-4">
+                  <div className="mb-2 flex items-center justify-between gap-2">
+                    <p className="text-xs text-neutral-400">{cert.issueDate}</p>
+                    <span className="rounded-full border border-neutral-700 px-2 py-0.5 text-[11px] text-neutral-300">
+                      {cert.level}
+                    </span>
+                  </div>
 
                   <h3 className="text-base font-semibold text-white leading-snug line-clamp-2 mb-2">
                     {cert.title}
@@ -146,6 +200,10 @@ export default function Certifications() {
 
                   <p className="text-sm text-neutral-400">
                     {cert.issuer}
+                  </p>
+
+                  <p className="mt-2 text-xs text-neutral-500">
+                    {cert.duration}
                   </p>
 
                 </div>
@@ -186,8 +244,39 @@ export default function Certifications() {
               className="max-h-[calc(100vh-14rem)] w-auto object-contain"
             />
             <div className="border-t border-neutral-800 px-4 py-3 text-left">
-              <p className="text-sm text-neutral-300">{selectedCert.title}</p>
-              <p className="text-xs text-neutral-500">{selectedCert.issuer} • Press Esc to close</p>
+              <p className="text-sm text-neutral-200">{selectedCert.title}</p>
+              <p className="mt-1 text-xs text-neutral-400">
+                {selectedCert.issuer} • {selectedCert.issueDate} • {selectedCert.level}
+              </p>
+              <p className="mt-1 text-xs text-neutral-500">
+                Credential ID: {selectedCert.credentialId} • Duration: {selectedCert.duration}
+              </p>
+
+              <div className="mt-3 flex flex-wrap gap-2">
+                {selectedCert.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-neutral-700 bg-neutral-900 px-2 py-1 text-[11px] text-neutral-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              {selectedCert.verifyUrl ? (
+                <a
+                  href={selectedCert.verifyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-block rounded-md border border-neutral-600 px-3 py-1.5 text-xs text-white transition hover:border-white"
+                >
+                  Verify Credential
+                </a>
+              ) : (
+                <p className="mt-3 text-xs text-amber-400">Add verify URL for stronger credibility.</p>
+              )}
+
+              <p className="mt-2 text-[11px] text-neutral-500">Press Esc to close</p>
             </div>
           </div>
         </div>
