@@ -13,7 +13,7 @@ export default function About() {
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-8">
-          Solving real problems with purposeful,
+          Solving real problems with purposeful
           <span className="text-neutral-500"> user-first thinking</span>
         </h2>
 
