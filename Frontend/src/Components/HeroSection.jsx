@@ -24,7 +24,7 @@ export default function HeroSection() {
         {/* CTA Button */}
         <div className="mt-10 flex gap-4 justify-center flex-wrap">
           <a
-            href="mailto:hars8it2712@gmail.com"
+            href="mailto:harshitpathak0103@gmail.com"
             className="
             inline-flex items-center gap-2
             px-8 py-3

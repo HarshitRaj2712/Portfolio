@@ -87,7 +87,7 @@ export default function Contact() {
         <p className="text-glow-reveal-delay mt-6 text-neutral-400 text-sm">
           Or email me at{" "}
           <span className="text-white">
-            hars8it2712@gmail.com
+            harshitpathak0103@gmail.com
           </span>
         </p>
 
